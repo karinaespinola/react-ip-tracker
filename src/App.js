@@ -1,8 +1,11 @@
-import react from 'react';
+import './scss/style.scss';
 
 function App() {
+  const { REACT_APP_MY_ENV } = process.env;
   return (
-    <div></div>    
+    <div>
+      {REACT_APP_MY_ENV}
+    </div>    
   );
 }
 
