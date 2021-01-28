@@ -1,0 +1,11 @@
+.searchbar {
+    height: 60px;
+    width: 280px;
+    border-radius: 10px;
+    border: none;
+    font-size: $font-size;
+
+    :focus {
+        border: 10px solid $primary-color;
+    }
+}
