@@ -1,0 +1,14 @@
+.card {
+    width: 100%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.result-element {
+    flex-grow: 1;
+
+    .result-body {
+        margin-top: 5px;
+    }
+}

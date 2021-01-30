@@ -1,9 +1,10 @@
 .searchbar {
     height: 60px;
-    width: 280px;
+    width: 320px;
     border-radius: 10px 0px 0px 10px;
     border: none;
     font-size: $font-size;
+    padding: 10px;
 
     :focus {
         border: 10px solid $primary-color;

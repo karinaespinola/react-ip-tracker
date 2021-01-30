@@ -1,6 +1,7 @@
 import React from 'react';
 import background from '../img/pattern-bg.png';
 import SearchBar from './SearchBar';
+import SearchResult from './SearchResult';
 
 const Heading = () => {
     return (
@@ -8,7 +9,7 @@ const Heading = () => {
         className="heading"
         style={{backgroundImage: `url(${background})`}}
         >
-            <div className="container">
+            <div className="container" style={{position:'relative'}}>
                 <h1 
                 className="text-center white-text"
                 style={{marginTop: '20px'}}
@@ -20,8 +21,16 @@ const Heading = () => {
                 style={{marginTop: '40px'}}
                 >
                     <SearchBar />
-                </div>                
-            </div>            
+                </div>
+                <div 
+                style={{
+                    marginTop: '20px',
+                    position: 'absolute'
+                }}
+                >
+                    <SearchResult/>
+                </div>                                 
+            </div>
         </div>
     )
 }
