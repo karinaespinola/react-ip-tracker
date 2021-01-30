@@ -1,11 +1,23 @@
 .searchbar {
     height: 60px;
     width: 280px;
-    border-radius: 10px;
+    border-radius: 10px 0px 0px 10px;
     border: none;
     font-size: $font-size;
 
     :focus {
         border: 10px solid $primary-color;
+    }
+}
+
+.btn-search {
+    background-color: black;
+    border: none;
+    width: 50px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($color: #000000, $amount: 5);
     }
 }
