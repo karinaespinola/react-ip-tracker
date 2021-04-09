@@ -24,7 +24,7 @@ const Heading = () => {
                 </div>
                 <div 
                 style={{
-                    marginTop: '20px',
+                    marginTop: '70px',
                     width: '100%'
                 }}
                 >
