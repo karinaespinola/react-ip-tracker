@@ -24,14 +24,8 @@ const Heading = () => {
                 </div>
                 <div 
                 style={{
-<<<<<<< HEAD
                     marginTop: '20px',
                     width: '100%'
-=======
-                    position: 'relative', 
-                    width: '100%',
-                    bottom: '-100px'
->>>>>>> master
                 }}
                 >
                     <SearchResult/>
