@@ -8,7 +8,20 @@
 .result-element {
     flex-grow: 1;
 
+    .result-title {
+        color: $dark-grey;
+        font-weight: bold;
+    }
+
     .result-body {
         margin-top: 5px;
+        font-weight: 500;
+        font-size: $result-font-size;
     }
+}
+
+.divider {
+    height: 50px;
+    width: 1px;
+    background-color: $dark-grey;
 }
