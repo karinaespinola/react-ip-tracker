@@ -10,7 +10,15 @@ const SearchBar = () => {
     const searchApi = () => {
         axios.get(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_APIFY_API_KEY}&ipAddress=${searchInput}`)
         .then(function (response) {
-          // handle success
+          // Update the context IpDataContext data
+          updateIpData(
+              {
+                  ...ipData,
+                  location: `${response.data.location.region}, ${response.data.location.city} <br/> ${response.data.location.postalCode}`,
+                  timezone: response.data.location.timezone,
+                  isp: response.data.isp
+              }
+          )
           console.log(response);
         })
         .catch(function (error) {
