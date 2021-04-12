@@ -21,7 +21,9 @@ const SearchBar = () => {
                       postalCode: response.data.location.postalCode
                   },
                   timezone: response.data.location.timezone,
-                  isp: response.data.isp
+                  isp: response.data.isp,
+                  latitude: response.data.location.lat,
+                  longitude: response.data.location.lng
               }
           )
           console.log(response);

@@ -26,7 +26,6 @@ const Heading = () => {
                 style={{
                     marginTop: '70px',
                     width: '100%',
-                    pointerEvents: 'none'
                 }}
                 >
                     <SearchResult/>

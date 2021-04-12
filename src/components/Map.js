@@ -7,7 +7,7 @@ const Map = () => {
 
     return (
         <MapContainer 
-        center={[51.505, -0.09]} 
+        center={[ipData.latitude, ipData.longitude]} 
         zoom={13} 
         scrollWheelZoom={false} 
         className="map"
@@ -16,7 +16,7 @@ const Map = () => {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]}>
+            <Marker position={[ipData.latitude, ipData.longitude]}>
             </Marker>
         </MapContainer>
     )
