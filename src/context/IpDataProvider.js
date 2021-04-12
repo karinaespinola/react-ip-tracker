@@ -5,7 +5,7 @@ export const IpDataContext = React.createContext();
 const IpDataProvider = (props) => {
     const initialIpData = {
         ip: '-',
-        location: '-',
+        location: null,
         timezone: '-',
         isp: '-' 
     }

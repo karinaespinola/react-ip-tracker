@@ -14,7 +14,16 @@ const SearchResult = () => {
             <Divider />
             <div className="result-element text-center">
                 <h3 className="result-title">Location</h3>
-                <div className="result-body">{ipData.location}</div>
+                <div className="result-body">
+                    {
+                        ipData.location === null
+                        ? "-"
+                        : <>
+                            {ipData.location.region}, {ipData.location.city} <br/>
+                            {ipData.location.postalCode}
+                        </>
+                    }
+                </div>
             </div>
             <Divider />
             <div className="result-element text-center">

@@ -14,7 +14,11 @@ const SearchBar = () => {
           updateIpData(
               {
                   ...ipData,
-                  location: `${response.data.location.region}, ${response.data.location.city} <br/> ${response.data.location.postalCode}`,
+                  location: {
+                      region: response.data.location.region,
+                      city: response.data.location.city,
+                      postalCode: response.data.location.postalCode
+                  },
                   timezone: response.data.location.timezone,
                   isp: response.data.isp
               }
@@ -44,7 +48,7 @@ const SearchBar = () => {
             className="searchbar"
             placeholder="Search for any IP address or domain"
             onChange={(e) => {updateIp(e.target.value)}}
-            value={ipData.ip}
+            value={ipData.ip === "-" ? "" : ipData.ip}
             />
             <button 
             className="btn-search"
