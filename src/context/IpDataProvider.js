@@ -7,7 +7,9 @@ const IpDataProvider = (props) => {
         ip: '-',
         location: null,
         timezone: '-',
-        isp: '-' 
+        isp: '-',
+        longitude: 51.505,
+        latitude: -0.09 
     }
 
     const [ipData, setIpData] = React.useState(initialIpData);
