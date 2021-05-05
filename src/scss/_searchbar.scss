@@ -19,6 +19,6 @@
     cursor: pointer;
 
     &:hover {
-        background-color: lighten($color: #000000, $amount: 5);
+        background-color: lighten($color: #000000, $amount: 20);
     }
 }
