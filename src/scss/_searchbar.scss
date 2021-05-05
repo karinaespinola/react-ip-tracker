@@ -1,6 +1,6 @@
 .searchbar {
     height: 60px;
-    width: 320px;
+    width: 100%;
     border-radius: 10px 0px 0px 10px;
     border: none;
     font-size: $font-size;
@@ -20,5 +20,11 @@
 
     &:hover {
         background-color: lighten($color: #000000, $amount: 20);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .searchbar {
+        width: 320px;
     }
 }
