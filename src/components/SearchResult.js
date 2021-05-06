@@ -3,7 +3,7 @@ import Divider from './Divider';
 import {IpDataContext} from '../context/IpDataProvider';
 
 const SearchResult = () => {
-    const {ipData, updateIpData} = React.useContext(IpDataContext);
+    const {ipData} = React.useContext(IpDataContext);
 
     return (
         <div className="card d-flex align-items-center box-shadow">
