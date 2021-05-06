@@ -6,7 +6,7 @@ const SearchResult = () => {
     const {ipData, updateIpData} = React.useContext(IpDataContext);
 
     return (
-        <div className="card d-flex align-items-center">
+        <div className="card d-flex align-items-center box-shadow">
             <div className="result-element text-center">
                 <h3 className="result-title">IP Address</h3>
                 <div className="result-body">{ipData.ip}</div>
