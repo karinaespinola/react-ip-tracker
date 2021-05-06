@@ -1,13 +1,19 @@
 import React from 'react';
 import { ReactComponent as SearchIcon } from '../img/icon-arrow.svg';
 import {IpDataContext} from '../context/IpDataProvider';
+import { useAlert } from 'react-alert';
 import axios from 'axios';
 
 const SearchBar = () => {
     const [searchInput, setSearchInput] = React.useState('');
     const {ipData, updateIpData} = React.useContext(IpDataContext);
+    const alert = useAlert();
     
     const searchApi = () => {
+        if( ! checkInput()) {
+            showAlert('Oops! Please enter an IP adress', 'error');
+            return;
+        }
         axios.get(`https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_APIFY_API_KEY}&ipAddress=${searchInput}`)
         .then(function (response) {
           // Update the context IpDataContext data
@@ -39,6 +45,21 @@ const SearchBar = () => {
 
     const updateIp = (ip) => {
         setSearchInput(ip);
+    }
+
+    const checkInput = () => {
+        if(searchInput === '') {
+            return false;
+        }
+
+        return true;
+    }
+
+    const showAlert = (message, type) => {
+        alert.show(message, {
+            timeout: 3000, // custom timeout just for this one alert
+            type: type,
+          });
     }
 
     return (
