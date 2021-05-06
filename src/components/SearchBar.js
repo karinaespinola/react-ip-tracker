@@ -72,9 +72,12 @@ const SearchBar = () => {
             placeholder="Search for any IP address or domain"
             onChange={(e) => {updateIp(e.target.value)}}
             value={searchInput}
+            aria-label="Enter any IP address or domain"
             />
             <button 
             className="btn-search"
+            id="search-button"
+            aria-label="Search Button"
             onClick={() => {searchApi()}}
             >
                 <SearchIcon/>
